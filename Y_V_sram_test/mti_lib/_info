@@ -1,0 +1,918 @@
+m255
+K3
+z0
+13
+cModel Technology
+Z0 d/afs/unity.ncsu.edu/users/n/nsriran/ASIC_520/project520/testing/Y_V_sram_test
+vaccum_control
+Z1 !s110 1429122449
+!i10b 1
+!s100 aNYZPljSEYezKG[^PGS5L0
+I5k_Nh6fm7KROFmmX0nSRQ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Modeltech_pe_edu_10.4/examples/asic_project/Y_V_sram_test
+w1429119292
+8control_new_accum.v
+Fcontrol_new_accum.v
+L0 1
+Z4 OP;L;10.4;61
+r1
+!s85 0
+31
+Z5 !s108 1429122449.805000
+Z6 !s107 yv_new.v|y_to_fifo.v|y_sram.v|yAddrDecoder.v|writeLogicY.v|vsramWriteData.v|v_sram_op2.v|updateYcomputation.v|updateY_control.v|top.v|test_with_memory.v|test_fullyinteg.v|roundRobin.v|new_accum.v|mydesign.v|mult_dw.v|mlt_cplx.v|memory.v|iter_done.v|integrate.v|i_sram.v|getYMatAdd.v|fp_div.v|fp_designware.v|fp_addsub.v|dividor_done.v|divider_wrap.v|div_cplx.v|counterMod.v|control_new_accum.v|control_I_accum.v|controlCounterIter.v|chngY_datapath.v|busArbit.v|addsub_cplx.v|addsub.v|V_flipflops_from_Y.v|I_subtract_accum.v|DW_fp_mult_48.v|DW_fp_div_48.v|
+Z7 !s90 -reportprogress|300|DW_fp_div_48.v|DW_fp_mult_48.v|I_subtract_accum.v|V_flipflops_from_Y.v|addsub.v|addsub_cplx.v|busArbit.v|chngY_datapath.v|controlCounterIter.v|control_I_accum.v|control_new_accum.v|counterMod.v|div_cplx.v|divider_wrap.v|dividor_done.v|fp_addsub.v|fp_designware.v|fp_div.v|getYMatAdd.v|i_sram.v|integrate.v|iter_done.v|memory.v|mlt_cplx.v|mult_dw.v|mydesign.v|new_accum.v|roundRobin.v|test_fullyinteg.v|test_with_memory.v|top.v|updateY_control.v|updateYcomputation.v|v_sram_op2.v|vsramWriteData.v|writeLogicY.v|yAddrDecoder.v|y_sram.v|y_to_fifo.v|yv_new.v|
+!s101 -O0
+!i113 1
+o-O0
+vaccumulator
+R1
+!i10b 1
+!s100 d6z>B]2;HaG_7^?kF>hTb0
+IJfh[B_aP=MX8GG]7<Q6QG3
+R2
+R3
+w1429098589
+8new_accum.v
+Fnew_accum.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vaddsub_cplx
+R1
+!i10b 1
+!s100 ZzdC]zQdjO4na5N^l7R6;3
+I;]PYTgX>VGV?=:2GP?R1A2
+R2
+R3
+w1428514619
+8addsub_cplx.v
+Faddsub_cplx.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vbusArbit
+R1
+!i10b 1
+!s100 [4VO:cU[bCP:E<C:H2Vhb3
+IBL[Jo:Z;T8ZGE^B5QDN`C2
+R2
+R3
+Z8 w1428987532
+8busArbit.v
+FbusArbit.v
+L0 27
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nbus@arbit
+vbusWriteY
+Z9 !s110 1429122450
+!i10b 1
+!s100 [<;LOlDK36HFUYQMd^jI=1
+I3<Fg^gO`oeYA?md95cz?h1
+R2
+R3
+R8
+8writeLogicY.v
+FwriteLogicY.v
+L0 30
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nbus@write@y
+vcontrol_I_accum
+R1
+!i10b 1
+!s100 QDWXh^AlGZ@NUe=jB^hi]0
+IBMkaT4^74W=YRZL8R@Z1_1
+R2
+R3
+w1428879840
+8control_I_accum.v
+Fcontrol_I_accum.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+ncontrol_@i_accum
+vcontrolCounterIter
+R1
+!i10b 1
+!s100 jQI3CjZaNJTcULC2FWz4E2
+Ic9^AYYXU=kg1C87Dn[<UU3
+R2
+R3
+w1429088042
+8controlCounterIter.v
+FcontrolCounterIter.v
+L0 16
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+ncontrol@counter@iter
+vcounterMod
+R1
+!i10b 1
+!s100 [mU3A7U[b6:8eN7m9fP?b0
+Ij9j:l^F`h3NCCcTo?VZY@0
+R2
+R3
+Z10 w1428968600
+8counterMod.v
+FcounterMod.v
+L0 10
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+ncounter@mod
+vDivider
+R1
+!i10b 1
+!s100 FD2]45Y9]D_gm@ZY`NgOj0
+Io?;CD^A6X5H7fGU]j2aSA2
+R2
+R3
+w1428736808
+8div_cplx.v
+Fdiv_cplx.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+n@divider
+vdivider_wrap
+R1
+!i10b 1
+!s100 D7RoSZhP:70T]00lD7A]E3
+IlhlghojN68?H^jQ`lzAjB0
+R2
+R3
+w1428999204
+8divider_wrap.v
+Fdivider_wrap.v
+L0 14
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vdividor_done
+R1
+!i10b 1
+!s100 L[TUYMKzdoi969A;:12YC0
+I`;A6R4Z>02F>g024N`Bn[3
+R2
+R3
+w1429054589
+8dividor_done.v
+Fdividor_done.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vDW_fp_addsub
+R2
+R4
+r1
+!s85 0
+31
+!s100 <38SGN9Febh]Ec^@hlLLI1
+I<38SGN9Febh]Ec^@hlLLI1
+R0
+w1428881884
+F/afs/eos.ncsu.edu/dist/synopsys2013/syn/dw/sim_ver/DW_fp_addsub.v
+Z11 8addsub.v
+Z12 Faddsub.v
+L0 68
+Z13 OE;L;10.0c;49
+!s108 1429068865.944109
+!s107 /afs/eos.ncsu.edu/dist/synopsys2013/syn/dw/sim_ver/DW_fp_addsub.v|yv_new.v|y_to_fifo.v|y_sram.v|yAddrDecoder.v|writeLogicY.v|vsramWriteData.v|v_sram_op2.v|updateYcomputation.v|updateY_control.v|top.v|test_with_memory.v|test_fullyinteg.v|roundRobin.v|new_accum.v|mydesign.v|mult_dw.v|mlt_cplx.v|memory.v|iter_done.v|integrate.v|i_sram.v|getYMatAdd.v|fp_div.v|fp_designware.v|dividor_done.v|divider_wrap.v|div_cplx.v|counterMod.v|control_new_accum.v|control_I_accum.v|controlCounterIter.v|chngY_datapath.v|busArbit.v|addsub_cplx.v|addsub.v|V_flipflops_from_Y.v|I_subtract_accum.v|DW_fp_mult_48.v|DW_fp_div_48.v|
+!s90 -reportprogress|300|DW_fp_div_48.v|DW_fp_mult_48.v|I_subtract_accum.v|V_flipflops_from_Y.v|addsub.v|addsub_cplx.v|busArbit.v|chngY_datapath.v|controlCounterIter.v|control_I_accum.v|control_new_accum.v|counterMod.v|div_cplx.v|divider_wrap.v|dividor_done.v|fp_designware.v|fp_div.v|getYMatAdd.v|i_sram.v|integrate.v|iter_done.v|memory.v|mlt_cplx.v|mult_dw.v|mydesign.v|new_accum.v|roundRobin.v|test_fullyinteg.v|test_with_memory.v|top.v|updateY_control.v|updateYcomputation.v|v_sram_op2.v|vsramWriteData.v|writeLogicY.v|yAddrDecoder.v|y_sram.v|y_to_fifo.v|yv_new.v|
+n@d@w_fp_addsub
+vDW_fp_div_48
+R1
+!i10b 1
+!s100 MKS^1f=Rl8^84`;n0:RjX2
+IT62moI=AVWVL?6hAA]0HV1
+R2
+R3
+w1427470694
+8DW_fp_div_48.v
+FDW_fp_div_48.v
+L0 74
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+n@d@w_fp_div_48
+vDW_fp_mult
+!s100 WY2K_IfgDlZ0<<@9SNI;J1
+IWY2K_IfgDlZ0<<@9SNI;J1
+VmNaQ;TSlP@J`ccAE3FOWH0
+R0
+w1428731053
+F/afs/eos.ncsu.edu/dist/synopsys2013/syn/dw/sim_ver/DW_fp_mult.v
+Z14 8mult_dw.v
+Z15 Fmult_dw.v
+Z16 L0 60
+R13
+r1
+31
+!s108 1428783057.157359
+!s107 /afs/eos.ncsu.edu/dist/synopsys2013/syn/dw/sim_ver/DW_fp_mult.v|/afs/eos.ncsu.edu/dist/synopsys2013/syn/dw/sim_ver/DW_fp_addsub.v|yv_new.v|y_to_fifo.v|y_sram.v|v_sram_op2.v|test_integrate.v|new_accum.v|mult_dw.v|mlt_cplx.v|integrate.v|control_new_accum.v|addsub_cplx.v|addsub.v|V_flipflops_from_Y.v|
+!s90 -reportprogress|300|V_flipflops_from_Y.v|addsub.v|addsub_cplx.v|control_new_accum.v|integrate.v|mlt_cplx.v|mult_dw.v|new_accum.v|test_integrate.v|v_sram_op2.v|y_sram.v|y_to_fifo.v|yv_new.v|
+n@d@w_fp_mult
+!s85 0
+vDW_fp_mult_48
+R1
+!i10b 1
+!s100 aNYln1Z5JnDigHQ7<_L_m0
+Ig0T`6cRi6?G]0RFM_e:6[2
+R2
+R3
+w1427470680
+8DW_fp_mult_48.v
+FDW_fp_mult_48.v
+R16
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+n@d@w_fp_mult_48
+vDW_fp_mult_inst
+R1
+!i10b 1
+!s100 b6d;FL1==>BcnEEQMnWOR0
+I@?mW4@jK0_WUCDbj3<O4X1
+R2
+R3
+w1428792458
+R14
+R15
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+n@d@w_fp_mult_inst
+vfp_addsub
+R1
+!i10b 1
+!s100 KPbJE<P^`WMj8[92UcQ5M1
+IeK8f;N;HkX0E]khBi2Ij;2
+R2
+R3
+w1428963225
+8fp_addsub.v
+Ffp_addsub.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vfp_addsub_24
+R1
+!i10b 1
+!s100 ]]?@Q[1cZgN:c_<2gU1>g1
+Ia8DIRG7TVlB67mIPKIl2K1
+R2
+R3
+w1429071106
+R11
+R12
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vfp_designware
+R1
+!i10b 1
+!s100 ]0hizMRS=bR==mCO581773
+IJ?S`<[b]9oEFJhM^icJF?0
+R2
+R3
+w1428991067
+Z17 8fp_designware.v
+Z18 Ffp_designware.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vfp_div
+R1
+!i10b 1
+!s100 D`0LZaOdjg=V9d:Z1k5cX3
+If`Ed=8[Ob_ZTnW<ScDzD90
+R2
+R3
+w1428731216
+8fp_div.v
+Ffp_div.v
+L0 7
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vfp_dw
+!s100 gE7Ic_D@L3>22fT]3:VG33
+IgE7Ic_D@L3>22fT]3:VG33
+VOlYk1d<9cgPdh`=O0C1_l0
+R0
+R10
+R17
+R18
+L0 1
+R13
+r1
+31
+!s90 -reportprogress|300|fp_designware.v|
+!s108 1428983002.109501
+!s107 fp_designware.v|
+!s85 0
+vgetYMatAddress
+R1
+!i10b 1
+!s100 90`6kl1]C3Yn@n9bNcI^V3
+I>jl6;N16hen>8FYG]^SIG0
+R2
+R3
+w1429083821
+8getYMatAdd.v
+FgetYMatAdd.v
+Z19 L0 13
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nget@y@mat@address
+vi_sram
+R1
+!i10b 1
+!s100 HbIE<;_b97RYkoT[Za0gP2
+I1d7KEZ_0?PdJnHDeZWzP_1
+R2
+R3
+w1427978970
+8i_sram.v
+Fi_sram.v
+L0 7
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vI_subtract_accum
+R1
+!i10b 1
+!s100 4;k]mNRZ?gFHX3omUd^I:3
+I7P3oT:J[Y0[0g32?XB3kK0
+R2
+R3
+w1429055808
+8I_subtract_accum.v
+FI_subtract_accum.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+n@i_subtract_accum
+vintegrate
+R1
+!i10b 1
+!s100 =n>me8]GNRQAZM]b;6Kz?1
+IZOm8[WTRf>GPR4`8lf6lB1
+R2
+R3
+w1429105537
+8integrate.v
+Fintegrate.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+viter_done_calc
+R1
+!i10b 1
+!s100 e7Ro>[XDQd=bQe??Y71bn0
+Ibz<nk7eNYI:=zi=jcBVfO2
+R2
+R3
+w1429112070
+8iter_done.v
+Fiter_done.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vmemory
+R1
+!i10b 1
+!s100 MQ`8`?X_Z9P2UnIR^<Ro_1
+Il5?Xl4AOl_gPZ_?YZimAU3
+R2
+R3
+w1428994492
+8memory.v
+Fmemory.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vmlt_cplx
+R1
+!i10b 1
+!s100 U1R:6KA=9:YPFmBhD4YVL1
+ILYgY_hfTGBocH=IL7MGHQ2
+R2
+R3
+w1428792674
+8mlt_cplx.v
+Fmlt_cplx.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vmyDesign
+R1
+!i10b 1
+!s100 3Nd:>:V2dUjE:_5W<0leX2
+IERebR9k;JH72TfKEJ2h:l2
+R2
+R3
+w1429078205
+8mydesign.v
+Fmydesign.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nmy@design
+vroundRobin
+R1
+!i10b 1
+!s100 DJOkCz:9a4ELk`I;;hOT:2
+I5PlX=FFlOlg;g6zBiY=IC3
+R2
+R3
+w1429078289
+8roundRobin.v
+FroundRobin.v
+L0 18
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nround@robin
+vtb2
+R1
+!i10b 1
+!s100 [a^zo]4O_4[9dH?Nh84l[2
+I_h7DLlVe6H8EEeaL9UN>Z1
+R2
+R3
+w1429122445
+8test_fullyinteg.v
+Ftest_fullyinteg.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vtest_fixture
+R1
+!i10b 1
+!s100 3kk4RjncNAUD2[iUNENNH1
+IkHj>DnPCQ1US_05ajBG[<1
+R2
+R3
+w1428985143
+8test_with_memory.v
+Ftest_with_memory.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vtop
+R9
+!i10b 1
+!s100 Si]Kco2f^;1jUENRGfL^K1
+IA;0zg1M[m<d8UR@KQe]H92
+R2
+R3
+w1429033587
+8top.v
+Ftop.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vupdateY_control
+R9
+!i10b 1
+!s100 LlFa3CS9z04L_RP^doYZO0
+IB@25oSGPWIJ]:V[Hz9XiL2
+R2
+R3
+w1429087407
+8updateY_control.v
+FupdateY_control.v
+L0 26
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nupdate@y_control
+vupdateY_datapath
+R1
+!i10b 1
+!s100 V?5i3z=OT48ngaH4i[Jf20
+I2<Hd[hf_IT^j09cXf`oIZ3
+R2
+R3
+R8
+8chngY_datapath.v
+FchngY_datapath.v
+L0 21
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nupdate@y_datapath
+vupdateYcomputation
+R9
+!i10b 1
+!s100 IF_aMhc;WMSk06Y^`;MH_0
+ITE]4KTk^loU^UQZ_cM;:_3
+R2
+R3
+R8
+8updateYcomputation.v
+FupdateYcomputation.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nupdate@ycomputation
+vV_from_Y
+R1
+!i10b 1
+!s100 azXSd:TDEbZ@EHTT[EKK<0
+IJNo;TU3A6mZ285N:_e=ao2
+R2
+R3
+w1429054303
+8V_flipflops_from_Y.v
+FV_flipflops_from_Y.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+n@v_from_@y
+vv_sram_op2
+R9
+!i10b 1
+!s100 a5g=MmanZlYZJCbGEGWY72
+IGbTJh=z3UchaRQEC7lTKF3
+R2
+R3
+Z20 w1427689363
+8v_sram_op2.v
+Fv_sram_op2.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vvSRAMwrite
+R9
+!i10b 1
+!s100 ^BdXQ@P>`=J9beC8C_R^<2
+IhQJQJeINjc>h[285DXW?`0
+R2
+R3
+w1429054654
+8vsramWriteData.v
+FvsramWriteData.v
+L0 19
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+nv@s@r@a@mwrite
+vy_sram
+R9
+!i10b 1
+!s100 lM]o99:5gz6B^kmnm`FAH3
+I^=Y=dC?9do<k=bGkOgLXh0
+R2
+R3
+R20
+8y_sram.v
+Fy_sram.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vy_to_fifo
+R9
+!i10b 1
+!s100 <57UTTBe^<GVzK=SEUQXz1
+IbH=zDbS:U0ANzd[B`QOnH3
+R2
+R3
+w1429112790
+8y_to_fifo.v
+Fy_to_fifo.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+vyAddrDecodr
+R9
+!i10b 1
+!s100 IB;H2bOi49j;:052GJa?A1
+IRMHJe1<d<j_5bAW5oJ`CZ3
+R2
+R3
+R8
+8yAddrDecoder.v
+FyAddrDecoder.v
+R19
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0
+ny@addr@decodr
+vyv_control
+R9
+!i10b 1
+!s100 FZn_zURAnHmPDN;ZSz<zD3
+IMaIFeTWkU6WDA[R>n>Ffz2
+R2
+R3
+w1429029455
+8yv_new.v
+Fyv_new.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!s101 -O0
+!i113 1
+o-O0

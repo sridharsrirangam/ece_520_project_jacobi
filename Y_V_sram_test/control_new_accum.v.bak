@@ -1,0 +1,108 @@
+module accum_control(feedback_check1,feedback_check2,accum_done,get_I_flag,sel_add_even_odd,row_count,row_count_I,clock,reset,enable,zero_on_V);
+
+input clock,reset,enable;
+input feedback_check1,feedback_check2;
+output reg sel_add_even_odd;
+output reg accum_done,get_I_flag;
+reg [1:0] current_state,next_state;
+wire received_feed_0;
+reg [1:0]first_zero_received;
+output reg [9:0] row_count,row_count_I;
+reg [9:0] count_p1,count_p2,count_p3,count_p4;
+reg accum_done_p1,accum_done_p2;
+input zero_on_V;
+
+always@(posedge clock)
+	begin
+	if(~reset)
+	sel_add_even_odd<=1'b0;
+	else
+	sel_add_even_odd<=~sel_add_even_odd;
+	end
+
+
+always@(posedge clock) //used to disable accum_out for the first zero
+begin
+if(~(reset&enable)) first_zero_received<=2'b10;
+else 
+	begin
+	if((feedback_check1==1)&&(feedback_check2==0)) 
+ 	first_zero_received<=(first_zero_received>>1);
+	end
+end
+
+
+always@(posedge clock)
+begin
+if(~(reset&enable))
+current_state<=2'd0;
+else 
+current_state<=next_state;
+end
+always@(posedge clock)
+begin
+	accum_done_p1<=(!(zero_on_V));
+	accum_done_p2<=accum_done_p1;
+	accum_done<=accum_done_p2;
+end
+/*
+always@(*)
+begin
+accum_done=1'b0;
+get_I_flag=1'b0;
+
+case(current_state)
+2'd0: 
+begin
+//if((feedback_check1==1)&&(feedback_check2==0)) 
+if(!(zero_on_V))
+begin
+next_state=2'd1;
+end
+else
+begin
+next_state=2'd0;
+end
+end
+
+2'd1:
+begin
+	if(first_zero_received[0])
+	get_I_flag=1'b0;
+	else
+	get_I_flag=1'b1;
+ 
+next_state=2'd2;
+end
+2'd2:
+begin
+	if(first_zero_received[0])
+	accum_done=1'b0;
+	else
+	accum_done=1'b1;
+next_state=2'd0;
+end
+endcase
+end
+*/
+
+always@(posedge clock)
+begin
+if(~(reset&enable))
+row_count_I<=0;
+else
+begin
+if(accum_done)
+row_count_I<=row_count_I+1;
+end
+count_p1<=row_count_I;
+count_p2<=count_p1;
+count_p3<=count_p2;
+count_p4<=count_p3;
+row_count<=count_p4;
+end
+
+
+
+endmodule
+

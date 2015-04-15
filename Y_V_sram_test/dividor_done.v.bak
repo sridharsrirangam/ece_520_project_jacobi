@@ -1,0 +1,22 @@
+module dividor_done(clock,enable,reset,accum_done,dividor_done);
+input clock,enable,reset;
+input accum_done;
+output reg dividor_done;
+reg pipe1,pipe2,pipe3,pipe4,pipe5;
+
+always@(posedge clock)
+begin
+pipe1<=accum_done;
+pipe2<=pipe1;
+pipe3<=pipe2;
+pipe4<=pipe3;
+pipe5<=pipe4;
+dividor_done<=pipe5;
+end
+
+
+
+
+endmodule
+
+

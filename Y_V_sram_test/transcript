@@ -1,0 +1,2198 @@
+# //  ModelSim SE 10.0c Jul 21 2011 Linux 2.6.32-504.12.2.el6.x86_64
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -novopt tb2 
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+#  
+add wave sim:/tb2/u1/*
+radix -h
+# hexadecimal
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(59)
+#    Time: 218225 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 59
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(59)
+#    Time: 218225 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 59
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(59)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 59
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# ** Error: test_fullyinteg.v(56): Undefined variable: int.
+# ** Error: test_fullyinteg.v(56): near "i": syntax error, unexpected IDENTIFIER
+# ** Error: test_fullyinteg.v(56): Undefined variable: i.
+# ** Error: test_fullyinteg.v(56): near ")": syntax error, unexpected ')', expecting ';'
+# ** Error: test_fullyinteg.v(70): near "$finish": syntax error, unexpected SYSTEM_IDENTIFIER
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# /ncsu/modelsim10.0c/linux/vlog failed.
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 218225 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+run -a
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# ** Error: y_to_fifo.v(92): LHS in procedural continuous assignment may not be a net: zero_on_V.
+# -- Compiling module yv_control
+# /ncsu/modelsim10.0c/linux/vlog failed.
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# ** Error: y_to_fifo.v(105): near "begin": syntax error, unexpected begin
+# ** Error: y_to_fifo.v(107): Undefined variable: zero_on_p2.
+# ** Error: y_to_fifo.v(109): near "else": syntax error, unexpected else
+# ** Error: yv_new.v(26): Port mode is incompatible with declaration: switch_from_fifo1_fifo2
+# ** Error: yv_new.v(27): 'y_1_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_1_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_2_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_2_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_3_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_3_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_4_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_4_col_info' already declared in this scope (y_to_fifo) with a type.
+# /ncsu/modelsim10.0c/linux/vlog failed.
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# ** Error: y_to_fifo.v(105): near "begin": syntax error, unexpected begin
+# ** Error: y_to_fifo.v(107): Undefined variable: zero_on_V_p2p2.
+# ** Error: y_to_fifo.v(109): near "else": syntax error, unexpected else
+# ** Error: yv_new.v(26): Port mode is incompatible with declaration: switch_from_fifo1_fifo2
+# ** Error: yv_new.v(27): 'y_1_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_1_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_2_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_2_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_3_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_3_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_4_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_4_col_info' already declared in this scope (y_to_fifo) with a type.
+# /ncsu/modelsim10.0c/linux/vlog failed.
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# ** Error: y_to_fifo.v(106): near "begin": syntax error, unexpected begin
+# ** Error: y_to_fifo.v(108): Undefined variable: zero_on_V_p2p2.
+# ** Error: y_to_fifo.v(110): near "else": syntax error, unexpected else
+# ** Error: yv_new.v(26): Port mode is incompatible with declaration: switch_from_fifo1_fifo2
+# ** Error: yv_new.v(27): 'y_1_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_1_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_2_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_2_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_3_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_3_col_info' already declared in this scope (y_to_fifo) with a type.
+# ** Error: yv_new.v(27): 'y_4_col_info' already declared in this scope (y_to_fifo) with a conflicting port direction.
+# ** Error: yv_new.v(27): 'y_4_col_info' already declared in this scope (y_to_fifo) with a type.
+# /ncsu/modelsim10.0c/linux/vlog failed.
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+run -a
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+# Causality operation skipped due to absense of debug database file
+# Window cannot be closed because the modal window "Windows" is still open.
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+restart -f
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1949725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1980725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1980725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a
+# ** Note: $finish    : test_fullyinteg.v(71)
+#    Time: 1980725 ns  Iteration: 2  Instance: /tb2
+# 1
+# Break in Module tb2 at test_fullyinteg.v line 71
+vlog *.v
+# Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module DW_fp_div_48
+# -- Compiling module DW_fp_mult_48
+# -- Compiling module I_subtract_accum
+# -- Compiling module V_from_Y
+# -- Compiling module DW_fp_addsub
+# -- Compiling module fp_addsub_24
+# -- Compiling module addsub_cplx
+# -- Compiling module busArbit
+# -- Compiling module updateY_datapath
+# -- Compiling module controlCounterIter
+# -- Compiling module control_I_accum
+# -- Compiling module accum_control
+# -- Compiling module counterMod
+# -- Compiling module Divider
+# -- Compiling module divider_wrap
+# -- Compiling module dividor_done
+# -- Compiling module fp_designware
+# -- Compiling module fp_div
+# -- Compiling module getYMatAddress
+# -- Compiling module i_sram
+# -- Compiling module integrate
+# -- Compiling module iter_done_calc
+# -- Compiling module memory
+# -- Compiling module mlt_cplx
+# -- Compiling module DW_fp_mult_inst
+# -- Compiling module myDesign
+# -- Compiling module accumulator
+# -- Compiling module roundRobin
+# -- Compiling module tb2
+# -- Compiling module test_fixture
+# -- Compiling module top
+# -- Compiling module updateY_control
+# -- Compiling module updateYcomputation
+# -- Compiling module v_sram_op2
+# -- Compiling module vSRAMwrite
+# -- Compiling module busWriteY
+# -- Compiling module yAddrDecodr
+# -- Compiling module y_sram
+# -- Compiling module y_to_fifo
+# -- Compiling module yv_control
+# 
+# Top level modules:
+# 	counterMod
+# 	tb2
+# 	test_fixture
+restart -f
+# Loading work.tb2
+# Loading work.top
+# Loading work.myDesign
+# Loading work.updateYcomputation
+# Loading work.updateY_datapath
+# Loading work.updateY_control
+# Loading work.yAddrDecodr
+# Loading work.getYMatAddress
+# Loading work.roundRobin
+# Loading work.busArbit
+# Loading work.busWriteY
+# Loading work.integrate
+# Loading work.y_to_fifo
+# Loading work.yv_control
+# Loading work.V_from_Y
+# Loading work.accum_control
+# Loading work.I_subtract_accum
+# Loading work.control_I_accum
+# Loading work.divider_wrap
+# Loading work.dividor_done
+# Loading work.iter_done_calc
+# Loading work.vSRAMwrite
+# Loading work.accumulator
+# Loading work.controlCounterIter
+# Loading work.memory
+# Loading work.y_sram
+# Loading work.v_sram_op2
+# Loading work.i_sram
+# Loading work.fp_designware
+# Loading work.mlt_cplx
+# Loading work.DW_fp_mult_inst
+# Loading work.DW_fp_mult_48
+# Loading work.fp_addsub_24
+# Loading work.DW_fp_addsub
+# Loading work.addsub_cplx
+# Loading work.Divider
+# Loading work.fp_div
+# Loading work.DW_fp_div_48
+# ** Warning: (vsim-3015) integrate.v(153): [PCDPC] - Port size (48 or 48) does not match connection size (1) for port 'op_dividerResult'. The port definition is at: divider_wrap.v(18).
+#         Region: /tb2/u1/myDes_inst/integ_inst/Div1
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'WriteAddress_I'. The port definition is at: memory.v(29).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) top.v(178): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'I_WriteBus'. The port definition is at: memory.v(30).
+#         Region: /tb2/u1/memory
+# ** Warning: (vsim-3015) memory.v(81): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_1_sram
+# ** Warning: (vsim-3015) memory.v(83): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_2_sram
+# ** Warning: (vsim-3015) memory.v(85): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_3_sram
+# ** Warning: (vsim-3015) memory.v(89): [PCDPC] - Port size (9 or 9) does not match connection size (1) for port 'WriteAddress2'. The port definition is at: v_sram_op2.v(8).
+#         Region: /tb2/u1/memory/V_4_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'ReadAddress2'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+# ** Warning: (vsim-3015) memory.v(91): [PCDPC] - Port size (192 or 192) does not match connection size (1) for port 'WriteBus'. The port definition is at: i_sram.v(7).
+#         Region: /tb2/u1/memory/I_sram
+run -a

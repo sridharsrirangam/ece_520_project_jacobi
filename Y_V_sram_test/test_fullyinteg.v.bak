@@ -1,0 +1,89 @@
+`timescale 1ns/100ps
+module tb2;
+	parameter CLKPERIOD = 50;
+	reg 				clock, reset;
+	reg exDone,filt_EN, dataready;
+   reg [255:0] ydataWrite;
+   reg [23:0] inReal,inImg;
+   reg [15:0] rowIn,colIn;
+   wire writeDoneFlag;
+//	wire 	[7:0] 		data1, data2;
+//	wire 	[9:0] 		address1, address2;
+//	wire				rd_en1, rd_en2;
+//
+   wire[47:0] finalVal;
+   integer data_file,scan_file, out_file;
+   integer i;
+   //integer i=0;
+	
+   
+  // integer data_file,scan_file;
+  // integer isram_file,isram_scan;
+   initial
+   begin
+      data_file = $fopen("change_data1.txt","r");
+      if(data_file == 0) begin
+         $display(" File Handle was NULL\n");
+         $finish;
+      end
+      out_file = $fopen("testout_data1.txt","w");
+      if(out_file == 0) begin
+         $display(" File Handle was NULL\n");
+         $finish;
+      end
+    end
+
+	initial	begin
+	  	//$dumpfile("Tut2.vcd"); // save waveforms in this file
+	  	//$dumpvars;  // saves all waveforms
+           $readmemh("vmem_data1_op2a.mem",u1.memory.V_1_sram.Register);
+           $readmemh("vmem_data1_op2b.mem",u1.memory.V_2_sram.Register);
+           $readmemh("vmem_data1_op2c.mem",u1.memory.V_3_sram.Register);
+           $readmemh("vmem_data1_op2d.mem",u1.memory.V_4_sram.Register);
+           $readmemh("ymem_data1.mem",u1.memory.Y_sram.Register);
+           $readmemh("imem_data1.mem",u1.memory.I_sram.Register);
+      
+      reset       = 0;
+      clock       = 0;
+
+      while(!$feof(data_file)) begin
+      
+      scan_file = $fscanf(data_file, "%x %x %x %x\n",rowIn,colIn,inReal, inImg); 
+
+      #(CLKPERIOD*2)
+            reset = 1;
+
+         @(posedge writeDoneFlag);
+         for(i=0; i<250; i=i+1)
+         begin
+            $fwrite(out_file,"%h%h%h%h\n", u1.memory.V_1_sram.Register[i], u1.memory.V_2_sram.Register[i],u1.memory.V_3_sram.Register[i],u1.memory.V_4_sram.Register[i]);
+         end// for
+        // $finish;
+
+
+
+       
+
+
+	   // #(50*CLKPERIOD) 
+          
+
+       end// while
+      $finish;
+	  end
+	
+	always #(CLKPERIOD/2) clock = ~clock;
+
+
+top u1(.clock(clock), .reset(reset),
+      .writeDoneFlag(writeDoneFlag),
+      .top_chgTxt_row(rowIn), .top_chgTxt_col(colIn), 
+      .top_chgTxt_real(inReal),.top_chgTxt_img(inImg), 
+      .top_opYval(finalVal)
+      );
+
+	
+ 
+	
+endmodule
+

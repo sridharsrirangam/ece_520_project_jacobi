@@ -1,0 +1,23 @@
+module I_subtract_accum(I_input,accum_value,in1_sub1,in2_sub1,opt_sub1,result_I_minus_Accum,I_value_select);
+input [1:0] I_value_select;
+input [47:0]  accum_value;
+input [191:0] I_input;
+output [47:0] in1_sub1,in2_sub1;
+input [47:0] opt_sub1;
+output [47:0] result_I_minus_Accum;
+reg [47:0] I_value;
+
+always@(*)
+begin
+	case(I_value_select)
+	2'b01: I_value=I_input[191:145];
+	2'b10: I_value=I_input[144:97];
+	2'b11: I_value=I_input[97:48];
+	2'b00: I_value=I_input[47:0];
+	endcase
+end
+
+assign in1_sub1=I_value;
+assign in2_sub2=accum_value;
+assign result_I_minus_Accum=opt_sub1;
+endmodule
